@@ -1,0 +1,48 @@
+.title {
+    font-size: 4em;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.navbar-element {
+    height: 50px;
+    width: 30vw;
+    padding-left: 15px;
+    align-content: center;
+    border: 1px #3a7e3c solid;
+    border-collapse: collapse;
+}
+
+.dino-container {
+    display: flex;
+    width: 90%;
+    border: 1px #3a7e3c solid;
+}
+
+.image-container {
+    width: 50%;
+}
+
+.text-container {
+    padding-left: 10px;
+}
+
+main {
+    margin-top: 50px;
+}
+
+html {
+    background-color: black;
+}
+
+a, p, h1 {
+    color: green;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
