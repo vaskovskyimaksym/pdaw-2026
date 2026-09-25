@@ -10,56 +10,158 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <a>
-                Dinosours List
-            </a>
-        </nav>
-        <nav>
-            <a>
-                About
-            </a>
-        </nav>
-        <nav>
-            <a>
-                Test
-            </a>
-        </nav>
-    </header>
-
     <main>
         <div class="dinos">
-            <div class="dino">
-                <div class="dino-name">
-                    Lorem, ipsum dolor.
-                </div>
-                <div class="dino-container">
-                    <div class="image-container">
-                        <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+            <div class="background">
+                <header>
+                    <nav>
+                        <a>
+                            Dinosours List
+                        </a>
+                    </nav>
+                    <nav>
+                        <a>
+                            About
+                        </a>
+                    </nav>
+                    <nav>
+                        <a>
+                            Test
+                        </a>
+                    </nav>
+                </header>
+
+                <div class="dino">
+                    <div class="dino-name">
+                        Lorem, ipsum dolor.
                     </div>
-                    <div class="characteristics">
-                        <p>
-                            Height: 100M
-                        </p>
-                        <p>
-                            Weight: 100KG
-                        </p>
-                        <p>
-                            Meal type: Carnivore
-                        </p>
-                        <p>
-                            Characteristic1: Something1
-                        </p>
-                        <p>
-                           Characteristic2: Something2
-                        </p>
-                        <p>
-                           Characteristic3: Something3
-                        </p>
+                    <div class="dino-container">
+                        <div class="image-container">
+                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                        </div>
+                        <div class="characteristics">
+                            <p>
+                                Height: 100M
+                            </p>
+                            <p>
+                                Weight: 100KG
+                            </p>
+                            <p>
+                                Meal type: Carnivore
+                            </p>
+                            <p>
+                                Characteristic1: Something1
+                            </p>
+                            <p>
+                            Characteristic2: Something2
+                            </p>
+                            <p>
+                            Characteristic3: Something3
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="background" id="background2">
+                <div class="dino">
+                    <div class="dino-name">
+                        Lorem, ipsum dolor.
+                    </div>
+                    <div class="dino-container">
+                        <div class="image-container">
+                            <img src="dinos/stego.png">
+                        </div>
+                        <div class="characteristics">
+                            <p>
+                                Height: 100M
+                            </p>
+                            <p>
+                                Weight: 100KG
+                            </p>
+                            <p>
+                                Meal type: Carnivore
+                            </p>
+                            <p>
+                                Characteristic1: Something1
+                            </p>
+                            <p>
+                            Characteristic2: Something2
+                            </p>
+                            <p>
+                            Characteristic3: Something3
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background" id="background3">
+                <div class="dino">
+                    <div class="dino-name">
+                        Lorem, ipsum dolor.
+                    </div>
+                    <div class="dino-container">
+                        <div class="image-container">
+                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                        </div>
+                        <div class="characteristics">
+                            <p>
+                                Height: 100M
+                            </p>
+                            <p>
+                                Weight: 100KG
+                            </p>
+                            <p>
+                                Meal type: Carnivore
+                            </p>
+                            <p>
+                                Characteristic1: Something1
+                            </p>
+                            <p>
+                            Characteristic2: Something2
+                            </p>
+                            <p>
+                            Characteristic3: Something3
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background" id="background4">
+                <div class="dino">
+                    <div class="dino-name">
+                        Lorem, ipsum dolor.
+                    </div>
+                    <div class="dino-container">
+                        <div class="image-container">
+                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                        </div>
+                        <div class="characteristics">
+                            <p>
+                                Height: 100M
+                            </p>
+                            <p>
+                                Weight: 100KG
+                            </p>
+                            <p>
+                                Meal type: Carnivore
+                            </p>
+                            <p>
+                                Characteristic1: Something1
+                            </p>
+                            <p>
+                            Characteristic2: Something2
+                            </p>
+                            <p>
+                            Characteristic3: Something3
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -68,3 +170,33 @@
     </footer>
 </body>
 </html>
+
+<script>
+
+window.addEventListener('scroll', () => {
+    const backgrounds = document.querySelectorAll('.background');
+
+    for (const background of backgrounds) {
+        const rect = background.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+
+        let progress;
+
+        if (rect.top < 0) {
+            // Уходит вверх
+            progress = -rect.top / rect.height;
+        } else if (rect.bottom > viewportHeight) {
+            // Уходит вниз
+            progress = (rect.bottom - viewportHeight) / rect.height;
+        } else {
+            // Полностью внутри viewport
+            progress = 0;
+        }
+
+        progress = Math.min(Math.max(progress, 0), 1);
+
+        background.style.opacity = 1 - progress;
+    }
+});
+
+</script>
