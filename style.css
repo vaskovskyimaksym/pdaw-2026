@@ -1,3 +1,19 @@
+/* ABOUT */
+
+.about-container {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about-main-text {
+    margin-top: 50px;
+    font-size: 30px;
+}
+
+
+/* CATALOG */
+
 #scroll-up {
     position: fixed;
     right: 50%;
@@ -125,16 +141,28 @@
     background-image: url("backgrounds/background4.webp");
 }
 
+/* COMMON */
+
 html {
     background-color: black;
 }
 
-a, p, h1, div {
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+a, p, h1, h2, div {
     color: white;
     margin: 0;
     font-family: "Audiowide", sans-serif;
     font-weight: 400;
     font-style: normal;
+    text-decoration: none;
 }
 
 header {
