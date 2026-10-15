@@ -29,6 +29,20 @@
     opacity: 0.7;
 }
 
+.silhouette {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.human-silhouette {
+    height: 100px;
+}
+
+.dino-silhouette {
+    height: 400px;
+    left: 50px;
+}
+
 .height-popup {
     position: absolute;
     z-index: 100;
@@ -39,6 +53,7 @@
     border-radius: 50px;
     opacity: 1;
     transition: opacity 0.3s ease;
+    align-content: center;
 }
 
 .height-popup.hidden {
