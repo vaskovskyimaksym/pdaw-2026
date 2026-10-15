@@ -74,15 +74,16 @@
 }
 
 .background-main {
-    height: 1000px;
+    height: 900px;
 }
 
 .dino-container {
     display: flex;
-    height: 80%;
+    height: 75%;
 }
 
 .characteristics {
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -107,6 +108,7 @@
 .dino-name {
     font-size: 9em;
     justify-self: center;
+    height: 20%;
 }
 
 .image-container {

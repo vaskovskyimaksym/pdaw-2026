@@ -33,7 +33,7 @@
 
                 <div class="dino dino-main">
                     <div class="dino-name">
-                        Lorem, ipsum dolor.
+                        Tyrannosaurus rex
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
@@ -41,22 +41,19 @@
                         </div>
                         <div class="characteristics">
                             <p>
-                                Height: 100M
+                                Height: 3.7 to 4 meters
                             </p>
                             <p>
-                                Weight: 100KG
+                                Length: 12 to 13 meters
                             </p>
                             <p>
-                                Meal type: Carnivore
+                                Mass: 7 to 8 tons
                             </p>
                             <p>
-                                Characteristic1: Something1
+                                Diet: Carnivore
                             </p>
                             <p>
-                            Characteristic2: Something2
-                            </p>
-                            <p>
-                            Characteristic3: Something3
+                                Period: Late Cretaceous period (68 to 66 million years ago)
                             </p>
                         </div>
                         <div class="description-container hidden">
@@ -166,7 +163,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -209,7 +206,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -252,7 +249,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -295,7 +292,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -338,7 +335,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -381,7 +378,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -424,7 +421,7 @@
                     </div>
                     <div class="dino-container">
                         <div class="image-container">
-                            <img src="https://static.wikia.nocookie.net/jurassicpark/images/0/02/Ember_new_render.png/revision/latest?cb=20251006213308">
+                            <img src="dinos/trex.webp">
                         </div>
                         <div class="characteristics">
                             <p>
@@ -478,21 +475,14 @@
 
 <script>
 
-let descriptionHidden = true;
-
 function expandDescription(button) {
-    if (descriptionHidden) {
-        descriptionHidden = false;
-        button.parentElement.parentElement.querySelector(".characteristics").classList.toggle('hidden');
-        button.classList.toggle('reversed');
-        button.parentElement.classList.remove('hidden');
-    }
-    else {
-        descriptionHidden = true;
-        button.parentElement.parentElement.querySelector(".characteristics").classList.remove('hidden');
-        button.classList.remove('reversed');
-        button.parentElement.classList.toggle('hidden');
-    }
+    const container = button.closest('.dino-container');
+    const characteristics = container.querySelector('.characteristics');
+    const descriptionContainer = container.querySelector('.description-container');
+
+    characteristics.classList.toggle('hidden');
+    descriptionContainer.classList.toggle('hidden');
+    button.classList.toggle('reversed');
 }
 
 const button = document.getElementById('scroll-up');
