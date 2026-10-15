@@ -33,10 +33,11 @@
     display: flex;
     position: absolute;
     width: 50%;
-    height: 100%;
     transition: transform 0.5s ease;
     transform: translateX(100%);
     align-self: center;
+    overflow: clip;
+    height: 79vh;
 }
 
 .description-container.hidden {
@@ -45,6 +46,7 @@
 
 .description {
     font-size: 2em;
+    align-self: center;
 }
 
 .show-more-button {
@@ -86,11 +88,11 @@
 }
 
 .background {
-    height: 900px;
+    height: 100vh;
 }
 
 .background-main {
-    height: 900px;
+    height: 110vh;
 }
 
 .dino-container {
