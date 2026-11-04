@@ -92,12 +92,11 @@
     padding: 0;
     cursor: pointer;
     position: relative;
-    transition: transform 0.3s ease;
     align-self: center;
 }
 
-.show-more-button.reversed {
-    transform: rotate(180deg);
+.show-more-button svg {
+    transition: transform 0.5s ease;
 }
 
 .dinos {
@@ -116,18 +115,16 @@
     height: 90%;
 }
 
-.background, 
-.background-main {
+.background {
+    height: 100vh;
+    min-height: 800px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.background {
-    height: 100vh;
-}
-
 .background-main {
     height: 110vh;
+    min-height: 900px;
 }
 
 .dino-container {
@@ -144,6 +141,7 @@
     padding-left: 20px;
     opacity: 1;
     transition: opacity 0.3s ease;
+    padding-right: 50px;
 }
 
 .characteristics.hidden {
@@ -204,6 +202,10 @@ html {
     background-color: black;
 }
 
+body {
+    margin: 0;
+}
+
 h1 {
     font-size: 60px;
     text-align: center;
@@ -246,4 +248,8 @@ nav {
 
 nav:hover {
     opacity: 1;
+}
+
+.reversed {
+    transform: rotate(180deg);
 }

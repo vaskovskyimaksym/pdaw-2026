@@ -273,21 +273,23 @@
 </html>
 
 <script>
-
+/*
 function openPopup(button) {
     const container = button.closest('.dino')
     const popup = container.querySelector('.height-popup');
     popup.classList.toggle('hidden');
 }
+*/
 
 function toggleDescription(button) {
     const container = button.closest('.dino');
     const characteristics = container.querySelector('.characteristics');
     const descriptionContainer = container.querySelector('.description-container');
+    const buttonSvg = button.querySelector('svg');
 
     characteristics.classList.toggle('hidden');
     descriptionContainer.classList.toggle('hidden');
-    button.classList.toggle('reversed');
+    buttonSvg.classList.toggle('reversed');
 }
 
 const button = document.getElementById('scroll-up');
