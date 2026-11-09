@@ -1,3 +1,12 @@
+
+
+/* PLAPPY DINO */
+
+#pter {
+    width: 50px;
+    height: 50px;
+}
+
 /* MINIGAMES */
 .minigames {
     margin: 0 600px;
@@ -24,6 +33,15 @@
 }
 
 .minigame-img {
+}
+
+.game {
+    height: 100vh;
+}
+
+.game-canvas {
+    width: 100%;
+    height: 100%;
 }
 
 /* ABOUT */
