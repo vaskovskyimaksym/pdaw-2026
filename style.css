@@ -1,9 +1,34 @@
 /* MINIGAMES */
+.minigames {
+    margin: 0 600px;
+}
+
+.minigames-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.minigame-container {
+    width: 100%;
+    margin-top: 100px;
+    min-height: 800px;
+    height: 100vh;
+}
+
+.minigame-img-container {
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.minigame-img {
+}
 
 /* ABOUT */
 
-.about-container {
-    margin-top: 100px;
+.about {
     margin-left: 100px;
     margin-right: 100px;
 }
@@ -159,7 +184,6 @@
 }
 
 .dino-name {
-    font-size: 9em;
     justify-self: center;
     height: 20%;
 }
@@ -209,12 +233,13 @@ body {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 9em;
     text-align: center;
 }
 
 h2 {
     font-size: 50px;
+    text-align: center;
 }
 
 a, p, h1, h2, div {
@@ -235,7 +260,6 @@ header {
 nav {
     height: 50px;
     width: 30vw;
-    padding-left: 15px;
     align-content: center;
     border: 0 #545454 solid;
     border-radius: 10px;
@@ -261,4 +285,8 @@ nav:hover {
 
 .reversed {
     transform: rotate(180deg);
+}
+
+.selected {
+    color: #7adf60;
 }
