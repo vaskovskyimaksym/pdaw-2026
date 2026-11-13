@@ -162,14 +162,13 @@
 
 .background {
     height: 100vh;
-    min-height: 800px;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: bottom;
 }
 
 .background-main {
     height: 110vh;
-    min-height: 900px;
 }
 
 .dino-container {
@@ -202,8 +201,8 @@
 }
 
 .dino-name {
-    justify-self: center;
     height: 20%;
+    text-align: center;
 }
 
 .image-container {
@@ -252,12 +251,10 @@ body {
 
 h1 {
     font-size: 9em;
-    text-align: center;
 }
 
 h2 {
     font-size: 50px;
-    text-align: center;
 }
 
 a, p, h1, h2, div {
@@ -307,4 +304,27 @@ nav:hover {
 
 .selected {
     color: #7adf60;
+}
+
+
+@media screen and (max-width: 768px) {
+    .dino-container {
+        flex-direction: column-reverse;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 12px;
+    }
+
+    .dino-name {
+        height: 5%;
+    }
+
+    .image-container {
+        width: 100%;
+    }
 }
