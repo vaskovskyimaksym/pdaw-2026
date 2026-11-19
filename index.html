@@ -293,9 +293,9 @@ function toggleDescription(button) {
     buttonSvg.classList.toggle('reversed');
 }
 
-const button = document.getElementById('scroll-up');
+const scrollButton = document.getElementById('scroll-up');
 
-button.addEventListener('click', () => {
+scrollButton.addEventListener('click', () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
