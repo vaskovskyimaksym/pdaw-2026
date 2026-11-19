@@ -184,7 +184,6 @@
 }
 
 .dino-name {
-    height: 20%;
     text-align: center;
 }
 
@@ -346,10 +345,6 @@ nav:hover {
         height: 90%;
     }
 
-    .dino-name {
-        height: 5%;
-    }
-
     .description-container {
         height: 92%;
         width: 100%;
@@ -368,5 +363,6 @@ nav:hover {
 
     .characteristics {
         width: 90%;
+        padding-top: 15px;
     }
 }
