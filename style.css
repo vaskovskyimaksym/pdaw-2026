@@ -105,18 +105,57 @@
     opacity: 0;
 }
 
+.background {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.background-main {
+    height: 110vh;
+}
+
+.dinos {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.dino {
+    background-color: rgb(0 0 0 / 30%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.dino-main {
+    height: 90%;
+}
+
+.dino-container {
+    display: flex;
+    height: 75%;
+    position: relative;
+}
+
 .description-container {
     display: flex;
     position: absolute;
     width: 50%;
-    transition: transform 0.5s ease;
-    transform: translateX(100%);
+    transition: left 0.5s ease;
+    left: 50%;
     align-self: center;
-    height: 79vh;
+    height: 90%;
 }
 
 .description-container.hidden {
-    transform: translateX( calc(200% - 40px) );
+    left: calc(100% - 40px);
 }
 
 .description {
@@ -144,41 +183,13 @@
     transition: transform 0.5s ease;
 }
 
-.dinos {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.dino {
-    background-color: rgb(0 0 0 / 30%);
-    height: 100%;
-}
-
-.dino-main {
-    height: 90%;
-}
-
-.background {
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-}
-
-.background-main {
-    height: 110vh;
-}
-
-.dino-container {
-    display: flex;
-    height: 75%;
+.dino-name {
+    height: 20%;
+    text-align: center;
 }
 
 .characteristics {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -200,14 +211,8 @@
     font-size: 4em;
 }
 
-.dino-name {
-    height: 20%;
-    text-align: center;
-}
-
 .image-container {
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -268,8 +273,12 @@ a, p, h1, h2, div {
 
 header {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 50px;
+    top: 0;
+    position: absolute;
+    z-index: 10;
+    justify-content: space-between;
+    width: 100%;
 }
 
 nav {
@@ -308,8 +317,8 @@ nav:hover {
 
 
 @media screen and (max-width: 768px) {
-    .dino-container {
-        flex-direction: column-reverse;
+    nav {
+        height: 30px;
     }
 
     h1 {
@@ -320,11 +329,44 @@ nav:hover {
         font-size: 12px;
     }
 
+    .background {
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .background-main {
+        height: 60vh;
+    }
+    
+    .dino-container {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 90%;
+    }
+
     .dino-name {
         height: 5%;
     }
 
-    .image-container {
+    .description-container {
+        height: 92%;
         width: 100%;
+        left: 0;
+        top: 0;
+        padding-top: 15px;
+    }
+
+    .image-container {
+        height: 60%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    .characteristics {
+        width: 90%;
     }
 }
